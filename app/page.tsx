@@ -1,5 +1,5 @@
 // import Image from 'next/image'
-import Link from  'next/link'
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -7,18 +7,16 @@ export default function Home() {
      
     <section className='header'>
         <nav>
-            <a href='index.html' className='logo'>Xplore
-                <i className='fab fa-staylinked'></i>kill
-            </a>
+            <Link href='/' className='logo'>Xplore</Link>
             <div className='nav-links' id='navLinks'>
                 {/* <!-- Reposnive bar open and close --> */}
                 {/* <i className='fa fa-times' onclick='hideMenu()'></i> */}
                 <ul>
-                    <li>Home</li>
-                    <li>Course</li>
-                    <li>Blog</li>
-                   <li>About</li>
-                    <li>Contact</li>
+                    <Link href={'/'}><li>Home</li></Link>
+                    <Link href={'./course'}><li>Course</li></Link>
+                    <Link href={'./blog'}><li>Blog</li></Link>
+                   <Link href={'./about'}><li>About</li></Link>
+                   <Link href={'./contact'}><li>Contact</li></Link>
                 </ul>
             </div>
             {/* <i className='fa fa-bars' onclick='showMenu()'></i> */}
@@ -201,5 +199,6 @@ export default function Home() {
     {/* <!-- Footer Section End --> */}
     {/* <script src='script.js'></script> */}
     </main>
+    
   )
 }
